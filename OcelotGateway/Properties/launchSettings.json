@@ -19,7 +19,7 @@
     "OcelotGateway": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://localhost:22500",
+      "applicationUrl": "http://localhost:22500",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

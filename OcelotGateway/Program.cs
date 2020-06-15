@@ -29,18 +29,6 @@ namespace OcelotGateway
                 .UseStartup<Startup>()
                 .Build()
                 .Run();
-            /*IWebHostBuilder builder = new WebHostBuilder();  
-            builder.ConfigureServices(s =>  
-            {  
-                s.AddSingleton(builder);  
-            });  
-            builder.UseKestrel()  
-                .UseContentRoot(Directory.GetCurrentDirectory())  
-                .UseStartup<Startup>()
-                .UseUrls("http://localhost:5001");  
-  
-            var host = builder.Build();  
-            host.Run();  */
         }
     }
 }

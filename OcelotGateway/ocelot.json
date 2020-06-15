@@ -5,42 +5,55 @@
       "DownstreamScheme": "http",
       "ServiceName": "the-gram-post",
       "UpstreamPathTemplate": "/api/post/{everything}",
-      "UpstreamHttpMethod": ["Get", "Post"]
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ]
     },
     {
       "DownstreamPathTemplate": "/api/feed/{everything}",
       "DownstreamScheme": "http",
       "ServiceName": "the-gram-feed",
       "UpstreamPathTemplate": "/api/feed/{everything}",
-      "UpstreamHttpMethod": ["Get"]
+      "UpstreamHttpMethod": [
+        "Get"
+      ]
     },
     {
       "DownstreamPathTemplate": "/api/profile/{everything}",
       "DownstreamScheme": "http",
-      "ServiceName": "the-gram-profile",
+      "ServiceName": "the-gram-profile-service",
       "UpstreamPathTemplate": "/api/profile/{everything}",
-      "UpstreamHttpMethod": ["Get", "Post", "Put"]
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post",
+        "Put"
+      ]
     },
     {
       "DownstreamPathTemplate": "/api/profile",
       "DownstreamScheme": "http",
-      "ServiceName": "the-gram-profile",
+      "ServiceName": "the-gram-profile-service",
       "UpstreamPathTemplate": "/api/profile",
-      "UpstreamHttpMethod": ["Post"]
+      "UpstreamHttpMethod": [
+        "Post"
+      ]
     },
     {
       "DownstreamPathTemplate": "/api/chat/{everything}",
       "DownstreamScheme": "http",
       "ServiceName": "the-gram-chat",
       "UpstreamPathTemplate": "/api/chat/{everything}",
-      "UpstreamHttpMethod": ["Get", "Post"]
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ]
     }
   ],
   "GlobalConfiguration": {
     "ServiceDiscoveryProvider": {
-      "Host": "consul",
-      "Port": 8500,
-      "Type": "Consul"
+      "Namespace": "default",
+      "Type": "KubernetesServiceDiscoveryProvider"
     }
   },
   "Logging": {
